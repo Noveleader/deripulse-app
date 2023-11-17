@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 let mongoClient;
 async function fetchDataFromDatabase() {
-  const database = mongoClient.db("deri-pulse");
+  const database = mongoClient.db("deripulse");
   const collection = database.collection("wholeData");
   const cursor = await collection.find({}, { projection: { chainwise: 0 } });
   const cachedData = cursor.toArray();

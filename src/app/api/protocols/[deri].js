@@ -2,7 +2,7 @@ import clientPromise from "../../../lib/mongodb";
 
 const api = async (deri) => {
   let mongoClient = await clientPromise;
-  const database = mongoClient.db("deri-pulse");
+  const database = mongoClient.db("deripulse");
   const collection = database.collection("wholeData");
   const resp = await collection
     .find({
